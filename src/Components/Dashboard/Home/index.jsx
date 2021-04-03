@@ -514,7 +514,6 @@ const Home = () => {
           </div>
         </div>
      
-         
       </div>
 
       {isLoaderTrue ? (
