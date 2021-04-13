@@ -2,20 +2,23 @@
 } */
 .myNavbar{
   background-color: #1A005B;
-  position: fixed;
-  width: 100%;
-  height: 120px;
-  margin-top: -3rem;
-  box-shadow: 0px 1px 21px -1px rgba(108, 102, 231, 0.2);
-  z-index: 2;
-}
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin-top: -1rem;
+    box-shadow: 0px 1px 21px -1px rgb(108 102 231 / 20%);
+    z-index: 2;
+  }
+  
+  .myContainer{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1.5em auto;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
 
-.myContainer{
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 1.5em auto;
-  justify-content: space-between;
-  align-items: center;
 }
 .btn1{
   background: linear-gradient(
@@ -23,14 +26,23 @@
       , #9982ed 0%, #f879b6 100%);
           color: #ffffff;
           text-transform: capitalize;
-          font-size: 18px;
-          margin: 15px 0px;
+          font-size: 14px;
+          margin: 10px 0px;
           margin-right: 50px;
           line-height: 50px;
           padding: 1em 2em;
           border-radius: 30px;
 }
-
+ nav>ul{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   list-style-type: none;
+   
+ }
+ nav>ul>li{
+   margin: 0 .5rem;
+ }
 .btn:hover {
   background: linear-gradient(-15deg, #f879b6 0%, #9982ed 100%);
   cursor: pointer;
@@ -53,256 +65,30 @@
   max-width: 70%;
   margin-left: 2em;
 }
+.btn1{
+   margin: 2px auto;
+}
+nav>ul{
+  margin: 0 4rem;
+}
+nav>ul>li{
+  margin: 10px .5rem;
+  
 }
 
+}
+.menu-button-4445{
+  margin: 0 1rem;
+}
+@media (max-width: 1000px) {
+.navUl {
+    display: none !important;
+  }
+  
+}
 .coinz-page-content-fullwidth  {
   background-color: #0e044d  !important;
   /* background-color: #141420 !important; */
 }
 
-.vc_custom_1527586026915 {
-  padding-top: 90px !important;
-  padding-bottom: 160px !important;
-
-  /* background: #1e1e30 url(../public/images/header-overlay-28bbc.png) !important; */
-}
-
-.vc_custom_1521807930692 {
-  margin-top: -165px !important;
-}
-
-.vc_custom_1522135279932 {
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
-  background-color: #191c2b !important;
-}
-
-.vc_custom_1522308232233 {
-  background-color: #191c2b !important;
-}
-
-.vc_custom_1522308196731 {
-  padding-top: 30px !important;
-  background-color: #191c2b !important;
-}
-
-.vc_custom_1527585863751 {
-  padding-top: 90px !important;
-  padding-bottom: 90px !important;
-  background-color: #1e1f30 !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-
-.vc_custom_1522274131303 {
-  margin-bottom: -165px !important;
-}
-
-.vc_custom_1527541534187 {
-  padding-top: 210px !important;
-  padding-bottom: 60px !important;
-  background-image: url(http://alexgurghis.com/themes/coinzfactory/wp-content/uploads/2018/05/bg-3.jpg?id=4499) !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-
-.vc_custom_1522356407307 {
-  margin-top: -190px !important;
-}
-
-.vc_custom_1521812066483 {
-  background-color: #191b2a !important;
-}
-
-.vc_custom_1521812088853 {
-  background-color: #191b2a !important;
-}
-
-.vc_custom_1521812104479 {
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
-  background-color: #191b2a !important;
-}
-
-.vc_custom_1522339435473 {
-  padding-right: 30px !important;
-}
-
-.vc_custom_1522269308217 {
-  margin-right: 20px !important;
-}
-
-.vc_custom_1521891298023 {
-  padding-bottom: 30px !important;
-}
-
-.vc_custom_1521891392427 {
-  border-bottom-width: 1px !important;
-  padding-top: 30px !important;
-  padding-bottom: 60px !important;
-  border-bottom-color: #2b2d41 !important;
-  border-bottom-style: solid !important;
-}
-
-.vc_custom_1521812386506 {
-  padding-bottom: 60px !important;
-}
-
-.vc_custom_1522329181089 {
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-
-.vc_custom_1522329190389 {
-  padding-top: 60px !important;
-  padding-right: 60px !important;
-  padding-bottom: 60px !important;
-  padding-left: 60px !important;
-}
-
-.vc_custom_1522336437527 {
-  margin-bottom: 0px !important;
-}
-
-.vc_custom_1521812403276 {
-  padding-bottom: 60px !important;
-}
-
-.vc_custom_1522329212295 {
-  padding-top: 60px !important;
-  padding-right: 60px !important;
-  padding-bottom: 60px !important;
-  padding-left: 60px !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-
-.vc_custom_1522329205101 {
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-
-.vc_custom_1522336485609 {
-  margin-bottom: 0px !important;
-}
-
-.vc_custom_1517150043628 {
-  padding-bottom: 20px !important;
-}
-
-.vc_custom_1522336534519 {
-  margin-bottom: 0px !important;
-}
-
-.vc_custom_1518740190096 {
-  padding-bottom: 60px !important;
-}
-
-.vc_custom_1518734790939 {
-  margin-bottom: 0px !important;
-}
-
-.vc_custom_1518824108756 {
-  padding-top: 60px !important;
-}
-
-.vc_custom_1517247899673 {
-  margin-bottom: 30px !important;
-}
-
-.vc_custom_1522338305357 {
-  background-color: #ffffff !important;
-}
-
-.vc_custom_1522339042607 {
-  margin-top: 40px !important;
-}
-
-.vc_custom_1522338342094 {
-  background-color: #ffffff !important;
-}
-
-.vc_custom_1522339059994 {
-  margin-top: 40px !important;
-}
-
-.vc_custom_1522338325361 {
-  background-color: #ffffff !important;
-}
-
-.vc_custom_1522339051520 {
-  margin-top: 40px !important;
-}
-
-.vc_custom_1522338333593 {
-  background-color: #ffffff !important;
-}
-
-.vc_custom_1522339068703 {
-  margin-top: 40px !important;
-}
-
-.vc_custom_1521812478849 {
-  margin-top: 30px !important;
-  padding-top: 60px !important;
-  padding-bottom: 20px !important;
-}
-
-.vc_custom_1517247899673 {
-  margin-bottom: 30px !important;
-}
-.lgo {
-  height: 10rem;
-  width: 200px;
-}
-
-@media only screen and (max-width: 600px) {
-  .lgo {
-    height: 300px;
-    width: 100px;
-  }
-}
-
-.wave_style_5fb75d069edff .coinz-wave-bg-content-top .st0,
-.wave_style_5fb75d069edff .coinz-wave-bg-content-bottom .st0,
-.wave_style_5fb75d069edff .coinz-wave-bg-content-top .st1,
-.wave_style_5fb75d069edff .coinz-wave-bg-content-bottom .st1,
-.wave_style_5fb75d069edff .coinz-clouds-bg-content-top .st0,
-.wave_style_5fb75d069edff .coinz-clouds-bg-content-bottom .st0,
-.wave_style_5fb75d069edff .coinz-curve-bg-content-top .st0,
-.wave_style_5fb75d069edff .coinz-curve-bg-content-bottom .st0 {
-  fill: #191b2a;
-}
-#coinz-devider-5fb75d06b1102.coinz-devider-wrapper svg .st0 {
-  fill: #f53e82 !important;
-}
-
-#coinz-devider-5fb75d06b6524.coinz-devider-wrapper svg .st0 {
-  fill: #f53e82 !important;
-}
-
-
-.buy-button{
-  max-width: 30px;
-  position: absolute;
-  right: 25px;
-  top: 10px;
-  cursor: pointer;
-  /* visibility: hidden; */
-}
-
-/* .setOnHover:hover > img{
-  visibility: visible;
-} */
-
-.rd3t-svg {
-  transform: rotate(90deg);
-}
-.rd3t-label__title{
-  transform: rotate(-90deg);
-}
+ 

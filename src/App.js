@@ -8,15 +8,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter, Route } from "react-router-dom";
-
-import "./UI/ui/9dcoposer.css";
-import "./UI/ui/animate.css";
 import "./UI/ui/ui8d.css";
-import './asset/styles.css';
-import "./UI/ui/responsive.css";
-import "./UI/ui/styles.css";
-import "./UI/ui/bootstrap.css";
-import "./UI/ui/crypto.css";
+import './UI/ui/styles1.css';
+// import './UI/ui/loader.css';
+
 
 
 function App() {

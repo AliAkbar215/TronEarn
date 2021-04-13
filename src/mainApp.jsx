@@ -73,9 +73,12 @@ const MainApp = () => {
   React.useEffect(() => {
     if (tronWeb) {
       if (isUserAuthenticated) {
-        setInterval(() => {
+       let endInterval= setInterval(() => {
           dispatch(UserDataAction(userWalletAddress, tronWeb, auth));
+          clearInterval(endInterval);
+
         }, 3000);
+        
       }
     }
   }, [tronWeb,isUserAuthenticated,userWalletAddress]);

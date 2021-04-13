@@ -94,7 +94,22 @@ export const UserReducer = (state = initState, action) => {
           ...state,
           getUserDownLine:payload
         }
-
+        case "UPLINE_INCOME":
+          return{
+            ...state,
+            uplineIncome:payload
+          }
+          case "TOTAL_INCOME":
+            return{
+              ...state,
+              totalIncome:payload
+            }
+            case "DIRECT_SPONSOR":
+              return{
+                ...state,
+                directSponsor:payload
+              }
+          
      case "REF_INCOME":
        return{
         ...state,

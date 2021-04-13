@@ -50,8 +50,8 @@ const Login = () => {
               <div class="account-wrapper">
                 <div class="account-logo">
                   <a href="#">
-                    <img
-                      src="/assets/img/nav_logo.png"
+                    <img style={{marginTop:"4em"}}
+                      src="/img/nav_logo.png"
                       alt="tronlink"
                     />
                   </a>
@@ -102,9 +102,8 @@ const Login = () => {
 
                 <div>
                   <div class="form-group">
-                   
-                      <div class="input-group mb-3">
-                    <div class="input-group-prepend">
+                    <div class="input-group mb-3">
+                     <div class="input-group-prepend">
                       <span class="input-group-text bg-transparent">
                         <i class="fa fa-users"></i>
                       </span>
@@ -135,7 +134,8 @@ const Login = () => {
                     </button>
                   </div>
                   </div>
-                  </div>
+                
+                </div>
 
                   <div class="form-group text-center">
                     <button

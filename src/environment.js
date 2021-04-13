@@ -14,9 +14,10 @@
 // };
 
 //test net
+
 export const environment = {
   defaultRefAddress: "TKACovBPFcAiyzwJprjY96fc4fo8wJs1Kv",
-  contractAddress: "TZJW2X59PtX7wGBjNs1ciZJEj5Dr9Xcsvv",
+  contractAddress: "TKcZAn3JHzTGjoSZnqP1wL9tJp7GK9yoio",
   contractLink:
-    "https://shasta.tronscan.org/#/contract/TZJW2X59PtX7wGBjNs1ciZJEj5Dr9Xcsvv/code",
+    "https://shasta.tronscan.org/#/contract/TKcZAn3JHzTGjoSZnqP1wL9tJp7GK9yoio/code",
 };

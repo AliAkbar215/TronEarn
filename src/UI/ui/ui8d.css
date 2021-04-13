@@ -49,214 +49,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-address,
-big,
-cite,
-code,
-em,
-font,
-img,
-small,
-strike,
-sub,
-sup,
-li,
-ol,
-ul,
-fieldset,
-form,
-label,
-legend,
-button,
-table,
-caption,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 100%;
-  line-height: 1.7;
-  font-family: inherit;
-  text-align: left;
-}
-
-strong {
-  font-weight: bold;
-}
-
-small {
-  font-size: 80%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  color: rgb(17, 17, 17);
-  font-variant-ligatures: common-ligatures;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-h1,
-.h1 {
-  font-size: 4em;
-  line-height: 1.615625em;
-  margin-bottom: 0.40625em;
-}
-
-h2,
-.h2 {
-  font-size: 2.8125em;
-  line-height: 1.65555556em;
-  margin-bottom: 0.57777777777778em;
-}
-
-h3,
-.h3 {
-  font-size: 2em;
-  line-height: 1.421875em;
-  margin-bottom: 0.8125em;
-}
-
-h4,
-.h4 {
-  font-size: 1.4375em;
-  line-height: 1.5375em;
-  margin-bottom: 1.1304347826087em;
-}
-
-h5,
-.h5 {
-  font-size: 1em;
-  line-height: 1.625em;
-  margin-bottom: 1.625em;
-}
-
-h6,
-.h6 {
-  font-size: 0.625em;
-  line-height: 2.6em;
-  margin-bottom: 2.36363636363636em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin-bottom: 2.36363636363636em;
-  font-size: 0.625em;
-}
-
+     
 .attached-images-post-gallery-title {
   float: left;
   width: 100%;
@@ -451,10 +244,10 @@ blockquote p:last-child {
 .woocommerce a.button {
   font-family: "Ubuntu", sans-serif;
   border-radius: 100px;
-  padding: 20px 40px;
+  padding: 16px px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 17px;
+  font-size: 16px;
+  line-height: 12px;
   text-transform: uppercase;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1046,12 +839,12 @@ body {
 }
 
 body a {
-  color: #f53e82;
+  color: #dde0ef;
   text-decoration: none;
 }
 
 body a:hover {
-  color: #b12d86;
+  color: #9e9ad3;
   text-decoration: none;
 }
 
@@ -1494,7 +1287,7 @@ body a,
 #header-nav-holder,
 #header-nav-holder.coinzfactory-fixed-header.has-fixed {
   box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.1);
-  background-color: #263e66f7;
+  background-color: #193b7d;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
@@ -2134,7 +1927,8 @@ a.blog-logo-text:hover {
 }
 
 .main-menu li.menu-item.menu-item-has-children a,
-.main-menu li.page_item.menu-item-has-children a {
+
+li.page_item.menu-item-has-children a {
   padding-right: 34px;
 }
 
@@ -2611,11 +2405,11 @@ table#coinzfactory_inventory_table .property-thumbnail img {
   height: auto;
 }
 
-.inventory-property-actions .btn {
+/* .inventory-property-actions .btn {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0;
-}
+} */
 
 .property-inventory-actions {
   list-style: none;
@@ -5257,7 +5051,7 @@ div.comment {
 .advance-search .af-estate-search-field select:focus {
   border: 1px solid #f53e82 !important;
 }
-
+/* 
 .advance-search .af-estate-search-field .af-estate-search-btn,
 .btn {
   cursor: pointer;
@@ -5278,11 +5072,11 @@ div.comment {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   outline: none !important;
-}
-
+} */
+/* 
 #modal .btn {
   width: 100%;
-}
+} */
 
 .advance-search .af-estate-search-field .af-estate-search-btn:active,
 .btn:active {
@@ -6388,141 +6182,24 @@ html .ui-button.ui-state-disabled:active {
 .coinz-page-footer .coinz-widget-list .title {
   color: #fff;
 }
-
-.coinz-widget-list .meta {
-  margin-top: 3px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #888;
-  padding-bottom: 0px;
-}
-
-.coinz-widget-list .excerpt {
-  margin-top: 3px;
-  color: #666;
-  line-height: 130%;
-  padding-bottom: 0px;
-}
-
-.coinz-widget-list a:hover .title {
-  text-decoration: underline;
-}
+ 
 
 /* Flickr Widget --------------------------------------- */
 
-.flickr_badge_image {
-  display: inline-block;
-  margin: 0 10px 10px 0;
-}
-
-.flickr_badge_image a,
-.flickr_badge_image img {
-  display: block;
-}
-
-.flickr_badge_image a {
-  padding: 4px;
-  background: #fff;
-  border: 1px solid #eee;
-}
-
+ 
 /* -------------------------------------------------------------------------------- */
 
 /*	13. Footer
 /* -------------------------------------------------------------------------------- */
-
-.coinz-page-footer-v3 {
-  background-color: #16161b;
-}
-
-.coinz-page-footer-v3 .widgets {
-  width: 30%;
-  float: left;
-  margin-left: 5%;
-}
-
-.coinz-page-footer-v3 .widgets:first-child {
-  margin-left: 0;
-}
-
+ 
 /* -------------------------------------------------------------------------------- */
 
 /*	14. Credits
 /* -------------------------------------------------------------------------------- */
-
-.credits.section {
-  padding: 30px 0;
-}
-
-.credits p {
-  padding-bottom: 5px;
-  font-family: "Ubuntu", sans-serif;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.credits .sep {
-  margin: 0 5px;
-  color: #f53e82;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 700;
-  position: relative;
-  bottom: -2px;
-}
-
-.credits p a {
-  color: #fff;
-}
-
-.credits p a:hover {
-  color: #f53e82;
-}
+  
 
 /* Colorix --------------------------------------- */
-
-.top-br,
-.left-br,
-.bottom-br,
-.right-br {
-  position: fixed;
-  background: #fff;
-  z-index: 999999;
-}
-
-.top-br {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-}
-
-.right-br {
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 100%;
-}
-
-.bottom-br {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-}
-
-.left-br {
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 100%;
-}
-
+ 
 .main-container {
   display: inline-block;
   width: 100%;
@@ -20789,19 +20466,8 @@ ul.coinz-accordion li.active h4 i.accordion-arrows:after {
   list-style: none;
 }
 
-.flip-clock-wrapper.clearfix:before,
-.flip-clock-wrapper.clearfix:after {
-  content: " ";
-  display: table;
-}
 
-.flip-clock-wrapper.clearfix:after {
-  clear: both;
-}
 
-.flip-clock-wrapper.clearfix {
-  *zoom: 1;
-}
 
 /* Main */
 
@@ -21662,6 +21328,7 @@ ul.coinz-accordion li.active h4 i.accordion-arrows:after {
   .coinz-menu-wrapper {
     margin-right: 0;
     margin-top: 9px;
+    left: 8rem;
   }
   .header-image-alt {
     min-width: 440px;

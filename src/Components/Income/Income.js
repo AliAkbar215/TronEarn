@@ -33,7 +33,7 @@ const Income = ({ tronWeb }) => {
   }, [tronWeb]);
   let EventsArray =
     eventsArray !== undefined && eventsArray !== null ? eventsArray : [];
-  console.log("EventsArray", EventsArray);
+  // console.log("EventsArray", EventsArray);
   // const  FilterArray = EventsArray.filter((id)=> Number(id.result[0]=== Number(usersID)))
 
   const FilterArray = EventsArray.filter((i) => {
@@ -63,7 +63,7 @@ const Income = ({ tronWeb }) => {
         <tbody>
           {FilterArray != undefined
             ? FilterArray.map((arr) => {
-                //   console.log(arr.result,"arr")
+                  // console.log(arr.result,"arr")
                 return (
                   <tr className="incomHeading">
                     <td>{arr.result[0]}</td>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Progress } from "react-sweet-progress";
 import "react-sweet-progress/lib/style.css";
 import { useSelector, useDispatch } from "react-redux";
+import {Link} from 'react-router-dom'
+
 import {
   smartMatrixAction,
   smartMatrixLevel2Action,
@@ -57,8 +59,14 @@ const Home = () => {
     usersID,
     withdrawAble,
     refIncome ,
-    getUserDownLine
+    getUserDownLine,
+    uplineIncome,
+    totalIncome,
+    directSponsor
   } = useSelector((state) => state.UserReducer);
+  
+  let str=directSponsor.slice(0,6)+"..."+directSponsor.slice(directSponsor.length-4,directSponsor.length)
+  // let doc=document.querySelectorAll(`bg-info`)
 
   const [isLoaderTrue, setIsLoaderTrue] = React.useState(true);
 
@@ -348,6 +356,10 @@ const Home = () => {
     },
 
   ];
+  crownMatrixData.forEach(element => {
+    console.log(element.isTrue);
+  });
+console.log('crwonMatrix',crownMatrixData.isTrue);
 
   const copyReferralLink = () => {
     let get = document.getElementById("refer").select();
@@ -449,12 +461,42 @@ const Home = () => {
               <span class="path2"></span>
             </span>
             <div class="info-box-content changeColor">
-              <span class="info-box-text">LEVEL INCOME</span>{" "}
+              <span class="info-box-text">MY LEVEL </span>{" "}
               <span class="info-box-number">{levelIncome} Trx</span>{" "}
             </div>
           </div>
         </div>
+        <div class="col-lg-4"  >
+          <div class={`info-box info-box8`}>
+            <span class="info-box-icon push-bottom rounded">
+              <img src="https://tronsquire.io/auth/img/icon1.png" />
+              <span class="path1"></span>
+              <span class="path2"></span>
+            </span>
+            <Link to="/dashboard/downline">
+            <div class="info-box-content changeColor">
+              <span class="info-box-text">MY TEAM </span>{" "}
+              <span class="info-box-number">{levelIncome} Trx</span>{" "}
+            </div>
+             </Link>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class={`info-box info-box9`}>
+            <span class="info-box-icon push-bottom rounded">
+              <img src="https://tronsquire.io/auth/img/icon1.png" />
+              <span class="path1"></span>
+              <span class="path2"></span>
+            </span>
+            <div class="info-box-content changeColor">
+              <span class="info-box-text">UPLINE INCOME </span>{" "}
+              <span class="info-box-number">{uplineIncome} Trx</span>{" "}
+            </div>
+          </div>
+        </div>
      
+       
         <div class="col-lg-4">
           <div class={`info-box info-box3`}>
             <span class="info-box-icon push-bottom rounded">
@@ -465,7 +507,7 @@ const Home = () => {
             <div class="info-box-content changeColor">
               <span class="info-box-text">TOTAL INCOME</span>{" "}
               <span class="info-box-number">
-                {+levelIncome + +matrixIncome} Trx
+                {totalIncome} Trx
               </span>{" "}
             </div>
           </div>
@@ -480,7 +522,7 @@ const Home = () => {
             </span>
             <div class="info-box-content changeColor">
               <span class="info-box-text">DIRECT SPONSOR</span>{" "}
-              <span class="info-box-number">{directReferrals}</span>{" "}
+              <span class="info-box-number">{str}</span>{" "}
             </div>
           </div>
         </div>
@@ -499,7 +541,6 @@ const Home = () => {
           </div>
         </div>
      
-     
         <div class="col-lg-4">
           <div class={`info-box info-box7`}>
             <span class="info-box-icon push-bottom rounded">
@@ -508,8 +549,8 @@ const Home = () => {
               <span class="path2"></span>
             </span>
             <div class="info-box-content changeColor">
-              <span class="info-box-text">SMART MATRIX</span>{" "}
-              <span class="info-box-number">{directReferrals}</span>{" "}
+              <span class="info-box-text">GLOBAL MATRIX</span>{" "}
+              <span class="info-box-number">0</span>
             </div>
           </div>
         </div>

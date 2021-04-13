@@ -47,6 +47,13 @@ code {
 .info-box7{
   background-color: #139e5d;
 }
+.info-box9{
+  background-color: #cc1990b0;
+
+}
+.info-box8:hover{
+  cursor: pointer;
+}
  
 .info-box-icon.push-bottom {
   margin-top: 0px;

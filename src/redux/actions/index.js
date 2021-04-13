@@ -1,7 +1,6 @@
 import { toast } from "react-toastify";
 import { environment } from "../../environment";
 
-
 export const RegisterAction = (referrerAddress) => async (dispatch, state) => {
   const { contract, userWalletAddress, tronWeb } = state().UserReducer;
 
@@ -187,6 +186,7 @@ const binaryTree = {
 
 export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
   // console.log("called", auth);
+
   if (defaultAddress) {
     tronweb
       .contract()
@@ -214,6 +214,7 @@ export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
               .users(defaultAddress)
               .call()
               .then((val) => {
+                // console.log(val.registrationid.toNumber(), "this is the value");
                 binaryTree.name = val.registrationid.toNumber();
               });
 
@@ -233,41 +234,44 @@ export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
                     });
                 }
 
-                if (val.arr.length) {
-                  await contract
-                    .getdirects(tronweb.address.fromHex(val.arr[1]))
-                    .call()
-                    .then(async (value) => {
-                      if (value.arr[a]) {
-                        await contract
-                          .users(tronweb.address.fromHex(value.arr[a]))
-                          .call()
-                          .then((user) => {
-                            binaryTree.children[0].children[
-                              cond
-                            ].name = user.registrationid.toNumber();
-                          });
-                      }
-                    });
+                // if (val.arr.length) {
+                //   await contract
+                //     .getdirects(tronweb.address.fromHex(val.arr[1]))
+                //     .call()
+                //     .then(async (value) => {
+                //       console.log('value====', value);
 
-                  if (val.arr[0]) {
-                    await contract
-                      .getdirects(tronweb.address.fromHex(val.arr[0]))
-                      .call()
-                      .then(async (value) => {
-                        if (value.arr[a]) {
-                          await contract
-                            .users(tronweb.address.fromHex(value.arr[a]))
-                            .call()
-                            .then((user) => {
-                              binaryTree.children[1].children[
-                                cond
-                              ].name = user.registrationid.toNumber();
-                            });
-                        }
-                      });
-                  }
-                }
+                //       if (value.arr[a]) {
+                //         await contract
+                //           .users(tronweb.address.fromHex(value.arr[a]))
+                //           .call()
+                //           .then((user) => {
+                //             binaryTree.children[0].children[
+                //               cond
+                //             ].name = user.registrationid.toNumber();
+                //           });
+                //       }
+
+                //     });
+
+                //   if (val.arr[0]) {
+                //     await contract
+                //       .getdirects(tronweb.address.fromHex(val.arr[0]))
+                //       .call()
+                //       .then(async (value) => {
+                //         if (value.arr[a]) {
+                //           await contract
+                //             .users(tronweb.address.fromHex(value.arr[a]))
+                //             .call()
+                //             .then((user) => {
+                //               binaryTree.children[1].children[
+                //                 cond
+                //               ].name = user.registrationid.toNumber();
+                //             });
+                //         }
+                //       });
+                //   }
+                // }
               }
             }
 
@@ -278,11 +282,15 @@ export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
 
             // console.log("=====>",binaryTree);
           });
+          
+
+        //new users
 
         contract
           .users(defaultAddress)
           .call()
           .then((val) => {
+            // console.log("==========new", val);
             dispatch({
               type: "WITHDRAW_ABLE",
               payload: tronweb.fromSun(val.withdrawable),
@@ -316,40 +324,51 @@ export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
             });
 
             dispatch({
+              type: "UPLINE_INCOME",
+              payload: tronweb.fromSun(val.uplineincome),
+            });
+            dispatch({
+              type: "TOTAL_INCOME",
+              payload: tronweb.fromSun(val.income),
+            });
+            dispatch({
+              type:"DIRECT_SPONSOR",
+              payload:tronweb.address.fromHex(val.referrer)
+            })
+
+            dispatch({
               type: "DIRECT_INCOME",
               payload: tronweb.fromSun(val.getdirects),
             });
-
           });
 
-          // users to show the direct income
-          await contract
+        // users to show the direct income
+        await contract
           .users(defaultAddress)
           .call()
-          .then((val)=>{
+          .then((val) => {
             // console.log("==========refIcome",val);
             dispatch({
-              type:"REF_INCOME",
-              dispatch:tronweb.fromSun(val.refincome)
+              type: "REF_INCOME",
+              dispatch: tronweb.fromSun(val.refincome),
+            });
+          });
 
-                 })
-          })
-
-        //getUserDownline 
+        //getUserDownline
         await contract
           .getUserDownlineCount(defaultAddress)
           .call()
           .then((val) => {
             //  console.log("=========valofarr",val.arr[0].toNumber());
-            const vaToNumber = val.arr.map(a => a.toNumber())
+            const vaToNumber = val.arr.map((a) => a.toNumber());
             const getUserDownLine = vaToNumber.reduce(
-              (accumulator, currentValue) => accumulator + currentValue );
-             
-              dispatch({
-                type:"GET_USERDOWNLINE",
-                payload:getUserDownLine
-              })
-              
+              (accumulator, currentValue) => accumulator + currentValue
+            );
+
+            dispatch({
+              type: "GET_USERDOWNLINE",
+              payload: getUserDownLine,
+            });
           });
 
         //contract
@@ -491,6 +510,7 @@ export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
           .getStationInfo(defaultAddress, 17)
           .call()
           .then((val) => {
+            
             dispatch({
               type: "CROWN_MATRIX_LEVEL_TWO",
               payload: val[0],
@@ -499,7 +519,6 @@ export const UserDataAction = (defaultAddress, tronweb) => async (dispatch) => {
       });
   }
 };
-
 
 export const smartMatrixAction = () => async (dispatch, state) => {
   const { contract, userWalletAddress, tronWeb } = state().UserReducer;
